@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://brdf8tig6asct"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_os3uy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmw5t"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 16
+collision_mask = 16
+motion_mode = 1
+script = ExtResource("1_os3uy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bmw5t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
