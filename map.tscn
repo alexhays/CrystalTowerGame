@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0fxv2gcpbqut"]
+[gd_scene load_steps=11 format=3 uid="uid://d0fxv2gcpbqut"]
 
 [ext_resource type="Texture2D" uid="uid://dvpcsrkq2vxcy" path="res://grass.png" id="1_43lmx"]
 [ext_resource type="Texture2D" uid="uid://86u2dtt1cw5p" path="res://highlight.png" id="2_w38ms"]
+[ext_resource type="Texture2D" uid="uid://w3s86bsklq8b" path="res://dirt.png" id="3_a1tu5"]
 [ext_resource type="Script" path="res://map.gd" id="3_jyyrv"]
+[ext_resource type="Texture2D" uid="uid://bqjon4g0iuuj0" path="res://dirt_grass.png" id="4_jg75d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_up88d"]
 texture = ExtResource("1_43lmx")
@@ -14,10 +16,22 @@ texture = ExtResource("2_w38ms")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_83e6r"]
+texture = ExtResource("3_a1tu5")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2f68"]
+texture = ExtResource("4_jg75d")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_6apv5"]
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_up88d")
 sources/1 = SubResource("TileSetAtlasSource_p1fxd")
+sources/3 = SubResource("TileSetAtlasSource_83e6r")
+sources/4 = SubResource("TileSetAtlasSource_t2f68")
 
 [node name="Map" type="TileMap"]
 scale = Vector2(0.2, 0.2)
