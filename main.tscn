@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy06jmc1fid4s"]
+[gd_scene load_steps=6 format=3 uid="uid://dy06jmc1fid4s"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_di68q"]
 [ext_resource type="PackedScene" uid="uid://d0fxv2gcpbqut" path="res://map.tscn" id="1_tcvtj"]
-[ext_resource type="PackedScene" uid="uid://brdf8tig6asct" path="res://player.tscn" id="3_du0h4"]
-[ext_resource type="PackedScene" uid="uid://dpv2yserf8sus" path="res://world_border.tscn" id="4_47654"]
+[ext_resource type="PackedScene" uid="uid://cb66eq2pblu0b" path="res://player.tscn" id="3_du0h4"]
+[ext_resource type="PackedScene" uid="uid://btxwfcaxymac3" path="res://world_border.tscn" id="4_47654"]
+[ext_resource type="PackedScene" uid="uid://bq1ply2402wvp" path="res://tower_menu.tscn" id="5_nkucc"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_di68q")
@@ -18,5 +19,10 @@ position = Vector2(640, 384)
 position = Vector2(-1280, -768)
 scale = Vector2(3, 3)
 
+[node name="TowerMenu" parent="." instance=ExtResource("5_nkucc")]
+
 [connection signal="leftClick" from="Map" to="." method="_on_map_left_click"]
 [connection signal="rightClick" from="Map" to="." method="_on_map_right_click"]
+[connection signal="mouseInsideMenu" from="TowerMenu" to="." method="_on_tower_menu_mouse_inside_menu"]
+[connection signal="spikeSelected" from="TowerMenu" to="." method="_on_tower_menu_spike_selected"]
+[connection signal="wallSelected" from="TowerMenu" to="." method="_on_tower_menu_wall_selected"]

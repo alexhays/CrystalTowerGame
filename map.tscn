@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dvpcsrkq2vxcy" path="res://grass.png" id="1_43lmx"]
 [ext_resource type="Texture2D" uid="uid://86u2dtt1cw5p" path="res://highlight.png" id="2_w38ms"]
-[ext_resource type="Texture2D" uid="uid://w3s86bsklq8b" path="res://dirt.png" id="3_a1tu5"]
+[ext_resource type="Texture2D" path="res://dirt.png" id="3_a1tu5"]
 [ext_resource type="Script" path="res://map.gd" id="3_jyyrv"]
-[ext_resource type="Texture2D" uid="uid://bqjon4g0iuuj0" path="res://dirt_grass.png" id="4_jg75d"]
+[ext_resource type="Texture2D" path="res://dirt_grass.png" id="4_jg75d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_up88d"]
 texture = ExtResource("1_43lmx")
