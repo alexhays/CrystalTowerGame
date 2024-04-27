@@ -21,8 +21,6 @@ window/size/viewport_width=1280
 window/size/viewport_height=768
 window/stretch/mode="canvas_items"
 
-<<<<<<< Updated upstream
-=======
 [input]
 
 left={
@@ -85,7 +83,6 @@ MenuSlot5={
 ]
 }
 
->>>>>>> Stashed changes
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

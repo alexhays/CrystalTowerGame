@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7mld37cbxr1y" path="res://wall.png" id="1_7ot20"]
 [ext_resource type="Script" path="res://tower_menu.gd" id="1_eyrrj"]
-[ext_resource type="Texture2D" uid="uid://csuqbef0mdmkg" path="res://spike_tower.png" id="2_jc8xg"]
+[ext_resource type="Texture2D" path="res://spike_tower.png" id="2_jc8xg"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_ahk31"]
 action = &"MenuSlot1"
