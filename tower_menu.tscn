@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bq1ply2402wvp"]
+
+[ext_resource type="Texture2D" uid="uid://b1vyrdk7tuvh2" path="res://wall.png" id="1_7ot20"]
+[ext_resource type="Script" path="res://tower_menu.gd" id="1_eyrrj"]
+[ext_resource type="Texture2D" path="res://spike_tower.png" id="2_jc8xg"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_ahk31"]
+action = &"MenuSlot1"
+
+[sub_resource type="Shortcut" id="Shortcut_dy80j"]
+events = [SubResource("InputEventAction_ahk31")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_ktr3f"]
+action = &"MenuSlot2"
+
+[sub_resource type="Shortcut" id="Shortcut_rfysr"]
+events = [SubResource("InputEventAction_ktr3f")]
+
+[node name="TowerMenu" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_eyrrj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -268.0
+offset_right = 0.00012207
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(128, 256)
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+alignment = 1
+
+[node name="WallTower" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+shortcut = SubResource("Shortcut_dy80j")
+icon = ExtResource("1_7ot20")
+
+[node name="SpikeTower" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+shortcut = SubResource("Shortcut_rfysr")
+icon = ExtResource("2_jc8xg")
+
+[connection signal="mouse_entered" from="VBoxContainer" to="." method="_on_v_box_container_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer" to="." method="_on_v_box_container_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/WallTower" to="." method="_on_wall_tower_pressed"]
+[connection signal="pressed" from="VBoxContainer/SpikeTower" to="." method="_on_spike_tower_pressed"]
