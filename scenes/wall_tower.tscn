@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0gf82cfvdmt0"]
 
-[ext_resource type="Texture2D" uid="uid://b1vyrdk7tuvh2" path="res://wall.png" id="1_0qcte"]
+[ext_resource type="Texture2D" uid="uid://b1vyrdk7tuvh2" path="res://assets/Wall.png" id="1_x6hut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go72h"]
 size = Vector2(128, 128)
@@ -12,4 +12,4 @@ visible = false
 shape = SubResource("RectangleShape2D_go72h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_0qcte")
+texture = ExtResource("1_x6hut")
