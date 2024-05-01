@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqjon4g0iuuj0"
-path="res://.godot/imported/dirt_grass.png-f9971dcc041a7d64ae22e20a87f8a3d8.ctex"
+uid="uid://csuqbef0mdmkg"
+path="res://.godot/imported/spike_tower.png-338685f7debd3c36dee3949fe20e85ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dirt_grass.png"
-dest_files=["res://.godot/imported/dirt_grass.png-f9971dcc041a7d64ae22e20a87f8a3d8.ctex"]
+source_file="res://assets/spike_tower.png"
+dest_files=["res://.godot/imported/spike_tower.png-338685f7debd3c36dee3949fe20e85ef.ctex"]
 
 [params]
 

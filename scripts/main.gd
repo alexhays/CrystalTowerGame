@@ -11,8 +11,8 @@ enum Tower {
 }
 
 # preload Towers
-var WALL_TOWER_SCENE = preload("res://wall_tower.tscn")
-var SPIKE_TOWER_SCENE = preload("res://spike_tower.tscn")
+var WALL_TOWER_SCENE = preload("res://scenes/wall_tower.tscn")
+var SPIKE_TOWER_SCENE = preload("res://scenes/spike_tower.tscn")
 
 # list of scenes
 var tower_scenes = {
