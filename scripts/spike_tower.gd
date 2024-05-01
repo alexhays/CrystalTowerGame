@@ -1,6 +1,9 @@
-extends StaticBody2D
+extends TileMap
 
-@export var speed = 5
+signal leftClick(pos)
+signal rightClick(pos)
+
+var tile = Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,4 +12,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Spike.rotate(delta*speed)
+	erase_cell(2,tile)
+	tile = local_to_map(get_local_mouse_position())
+	if get_cell_source_id(0,tile)==0:
+		set_cell(2,tile,1,Vector2(0,0),0)
+		var globalPos = to_global(map_to_local(tile))
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			emit_signal("leftClick",globalPos.x,globalPos.y)
+		elif Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+			emit_signal("rightClick",globalPos.x,globalPos.y)
