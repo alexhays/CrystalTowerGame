@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0gf82cfvdmt0"]
+[gd_scene load_steps=8 format=3 uid="uid://c0gf82cfvdmt0"]
 
+[ext_resource type="Script" path="res://scripts/wall_tower.gd" id="1_uke78"]
 [ext_resource type="Texture2D" uid="uid://b1vyrdk7tuvh2" path="res://assets/Wall.png" id="1_x6hut"]
 [ext_resource type="Script" path="res://scripts/health.gd" id="2_37wps"]
 [ext_resource type="PackedScene" uid="uid://dmakd2xyyo8dx" path="res://components/health_bar.tscn" id="3_bdu26"]
@@ -12,6 +13,7 @@ size = Vector2(126, 126)
 size = Vector2(128, 128)
 
 [node name="WallTower" type="StaticBody2D"]
+script = ExtResource("1_uke78")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -32,3 +34,5 @@ Health = NodePath("../Health")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 visible = false
 shape = SubResource("RectangleShape2D_q4b5m")
+
+[connection signal="areaHit" from="Hitbox" to="." method="_on_hitbox_area_hit"]

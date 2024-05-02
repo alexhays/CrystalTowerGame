@@ -13,11 +13,11 @@ func format(num:float):
 	return snappedf(clamp(num,min_health,max_health),health_step)
 
 func add(num:float):
-	value = format(num+value)
+	value = format(value+num)
 	return value
 
 func sub(num:float):
-	value = format(num-value)
+	value = format(value-num)
 	return value
 
 func set_value(num:float):

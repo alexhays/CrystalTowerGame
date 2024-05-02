@@ -36,7 +36,7 @@ func _process(delta):
 
 
 func add_tower(type:Tower,pos:Vector2):
-	if not active_towers.has(str(pos)):
+	if not active_towers.has(str(pos)) or not is_instance_valid(active_towers.get(str(pos))['node']):
 		var newTower = tower_scenes[type].instantiate()
 		add_child(newTower)
 		newTower.position = pos
